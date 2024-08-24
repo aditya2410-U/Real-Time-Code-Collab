@@ -49,10 +49,7 @@
   },
   "devDependencies": {
     "@types/codemirror": "^5.60.15",
-<<<<<<< HEAD
     "gh-pages": "^6.1.1",
-=======
->>>>>>> ebb0a0ebe6fb6d143db83bad5e52ce8045bd5dad
     "nodemon": "^2.0.15"
   }
 }
