@@ -7,7 +7,12 @@ const { MongoClient } = require("mongodb");
 const ACTIONS = require("./src/Actions");
 
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:3000",  // Allow frontend origin
+    methods: ["GET", "POST"]
+  }
+});
 
 app.use(express.static("build"));
 app.use((req, res, next) => {
@@ -18,7 +23,7 @@ const userSocketMap = {};
 const recentEditors = {}; // Store recent editors per room
 
 // const uri = 'mongodb://localhost:27017';
-const uri = "mongodb://127.0.0.1:27017";
+const uri = "mongodb+srv://adityasharma1946:aditya@cluster0.mvfc0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const client = new MongoClient(uri);
 
