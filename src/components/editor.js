@@ -59,7 +59,6 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
 
     return (
         <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
-            <Navbar></Navbar>
             <textarea id="realtimeEditor"></textarea>
         </div>
     );

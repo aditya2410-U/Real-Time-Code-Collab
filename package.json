@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "codemirror": "^5.65.2",
     "express": "^4.17.3",
+    "framer-motion": "^12.4.2",
     "lucide-react": "^0.475.0",
     "mongodb": "^6.13.0",
     "react": "^17.0.2",

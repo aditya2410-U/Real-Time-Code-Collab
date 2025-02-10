@@ -5,6 +5,7 @@ import Client from '../components/Client';
 import Editor from '../components/editor';
 import { initSocket } from '../socket';
 import { useLocation, useNavigate, Navigate, useParams } from 'react-router-dom';
+import Navbar from '../components/navbar';
 
 const EditorPage = () => {
     const socketRef = useRef(null);
@@ -85,6 +86,7 @@ const EditorPage = () => {
     }
 
     return (
+        
         <div className="mainWrap">
             <div className="aside">
                 <div className="asideInner">
@@ -97,23 +99,11 @@ const EditorPage = () => {
                             <Client key={client.socketId} username={client.username} />
                         ))}
                     </div>
-                    <h3>Recent Editors</h3>
-                    <div className="clientsList">
-                        {recentEditors.map((editor) => (
-                            <div key={editor.socketId}>
-                                {editor.username} - {new Date(editor.timestamp).toLocaleString()}
-                            </div>
-                        ))}
-                    </div>
+                   
                 </div>
-                <button className="btn copyBtn" onClick={copyRoomId}>
-                    Copy ROOM ID
-                </button>
-                <button className="btn leaveBtn" onClick={leaveRoom}>
-                    Leave
-                </button>
             </div>
             <div className="editorWrap">
+            <Navbar codeRef={codeRef} recentEditors={recentEditors} />
                 <Editor
                     socketRef={socketRef}
                     roomId={roomId}
