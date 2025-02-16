@@ -5,12 +5,10 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import SensorsIcon from '@mui/icons-material/Sensors';
 import DownloadIcon from '@mui/icons-material/Download';
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
-import Avatar from "@mui/material/Avatar";
-import AvatarGroup from "@mui/material/AvatarGroup";
-import Chip from "@mui/material/Chip";
 
 const Navbar = ({codeRef , recentEditors}) => {
   const { roomId } = useParams();  
@@ -48,26 +46,21 @@ function downloadCode() {
 }
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#1c1e29", paddingX: 2 }}>
+    <AppBar position="static" sx={{ backgroundColor: "white", paddingX: 2, borderBottom: '5px solid rgb(152, 83, 242)' }}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        
-        {/* Recent Editors Section */}
-        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <AvatarGroup max={4}>
-            {recentEditors.map((editor, index) => (
-              <Avatar key={index} sx={{ width: 32, height: 32, bgcolor: "#007ACC" }}>
-                {editor.username.charAt(0).toUpperCase()}
-              </Avatar>
-            ))}
-          </AvatarGroup>
-          <Chip label="Recent Editors" color="primary" variant="outlined" sx={{ fontSize: 12 }} />
-        </Box>
 
         {/* Button Section */}
-        <Box sx={{ display: "flex", gap: 1 }}>
-          <Button color="inherit" onClick={copyRoomId}><ContentCopyIcon /></Button>
-          <Button color="inherit" onClick={leaveRoom}><ExitToAppIcon /></Button>
-          <Button color="inherit" onClick={downloadCode}><DownloadIcon /></Button>
+        <Button sx={{ color: 'rgb(152, 83, 242)' }} onClick={copyRoomId} ><SensorsIcon sx={{ fontSize: '40px'}} /></Button>
+        <Box sx={{ display: "flex", gap: 1, ml: "auto" }}>
+        <Button sx={{ color: 'rgb(152, 83, 242)' }} onClick={copyRoomId}>
+    <ContentCopyIcon />
+  </Button>
+  <Button sx={{ color: 'rgb(152, 83, 242)' }} onClick={leaveRoom}>
+    <ExitToAppIcon />
+  </Button>
+  <Button sx={{ color: 'rgb(152, 83, 242)' }} onClick={downloadCode}>
+    <DownloadIcon />
+  </Button>
         </Box>
       </Toolbar>
     </AppBar>

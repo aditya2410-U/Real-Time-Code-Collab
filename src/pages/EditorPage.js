@@ -6,6 +6,8 @@ import Editor from '../components/editor';
 import { initSocket } from '../socket';
 import { useLocation, useNavigate, Navigate, useParams } from 'react-router-dom';
 import Navbar from '../components/navbar';
+import { colors } from '@mui/material';
+
 
 const EditorPage = () => {
     const socketRef = useRef(null);
@@ -87,22 +89,25 @@ const EditorPage = () => {
 
     return (
         
-        <div className="mainWrap">
+        <div className="mainWrap"> 
+        
             <div className="aside">
+            <div style={{ backgroundColor: 'white', padding: '15px', borderRadius: '15px', border: '5px solid rgb(152, 83, 242)', boxShadow: '0px 10px 10px 1px rgba(214, 68, 209, 0.5)' }}>
                 <div className="asideInner">
-                    <div className="logo">
-                        <img className="logoImage" src="/code-sync.png" alt="logo" />
+                    <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <img className="logoImage" src="/logo.png" alt="logo" />
+                        <h2 style={{ color: 'Black' }}>Code Sync</h2>
                     </div>
-                    <h3>Connected</h3>
+                    <h3 >Connected</h3>
                     <div className="clientsList">
                         {clients.map((client) => (
                             <Client key={client.socketId} username={client.username} />
                         ))}
                     </div>
-                   
+                    </div>
                 </div>
             </div>
-            <div className="editorWrap">
+            <div >
             <Navbar codeRef={codeRef} recentEditors={recentEditors} />
                 <Editor
                     socketRef={socketRef}

@@ -95,11 +95,12 @@ footer a:hover {
 }
 
 .aside {
-  background: #1c1e29;
+  background: rgb(255, 255, 255);
   padding: 16px;
-  color: #fff;
+  color: #000000;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  
 }
 .asideInner {
   flex: 1;
