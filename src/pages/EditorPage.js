@@ -92,7 +92,7 @@ const EditorPage = () => {
         <div className="mainWrap"> 
         
             <div className="aside">
-            <div style={{ backgroundColor: 'white', padding: '15px', borderRadius: '15px', border: '5px solid rgb(152, 83, 242)', boxShadow: '0px 10px 10px 1px rgba(214, 68, 209, 0.5)' }}>
+            <div style={{ backgroundColor: '#FAFAFA', padding: '15px', borderRadius: '15px', border: '5px solid rgb(152, 83, 242)', boxShadow: '0px 10px 10px 1px rgba(214, 68, 209, 0.5)' }}>
                 <div className="asideInner">
                     <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                         <img className="logoImage" src="/logo.png" alt="logo" />

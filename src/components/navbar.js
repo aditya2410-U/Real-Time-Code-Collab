@@ -46,7 +46,7 @@ function downloadCode() {
 }
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "white", paddingX: 2, borderBottom: '5px solid rgb(152, 83, 242)' }}>
+    <AppBar position="static" sx={{ backgroundColor: "#FAFAFA", paddingX: 2, borderBottom: '5px solid rgb(152, 83, 242)' }}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
 
         {/* Button Section */}

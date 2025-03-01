@@ -19,7 +19,7 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
                 document.getElementById("realtimeEditor"),
                 {
                     mode: { name: "javascript", json: true },
-                    theme: "dracula",
+                    theme: "monokai",
                     autoCloseTags: true,
                     autoCloseBrackets: true,
                     lineNumbers: true,
@@ -59,9 +59,9 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
 
     return (
         <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
-            <textarea id="realtimeEditor"></textarea>
+            {/* <textarea id="realtimeEditor"></textarea> */}
         </div>
     );
 };
 
-export default React.memo(Editor); // ✅ Prevent unnecessary re-renders
+export default React.memo(Editor); 

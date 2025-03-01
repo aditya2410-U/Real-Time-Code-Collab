@@ -35,13 +35,32 @@ const Home = () => {
     }
   };
   return (
-    <div className="homePageWrapper">
+    <div className="homePageWrapper" style={{ paddingRight: "20px" }}>
+      <div className="heroTextContainer">
+        <h1 className="heroText">
+          Code.
+          <br />
+          Editor.
+          <br />
+          Deploy.
+        </h1>
+      </div>
       <div className="formWrapper">
-        <img
-          className="homePageLogo"
-          src="/code-sync.png"
-          alt="code-sync-logo"
-        />
+        <div
+          className="logo"
+          style={{ display: "flex", alignItems: "center", gap: "10px" }}
+        >
+          <img
+            className="homePageLogo"
+            src="/logo.png"
+            alt="code-sync-logo"
+            style={{ height: "40px", width: "auto", paddingTop: '40px'}} // Adjust height to match text
+          />
+          <h2 style={{ color: "black", fontSize: "42px", margin: 0 }}>
+            Code Sync
+          </h2>
+        </div>
+
         <h4 className="mainLabel">Paste invitation ROOM ID</h4>
         <div className="inputGroup">
           <input
@@ -71,12 +90,6 @@ const Home = () => {
           </span>
         </div>
       </div>
-      <footer>
-        <h4>
-          Built with 💛 &nbsp; by &nbsp;
-          <a>Aditya Sharma</a>
-        </h4>
-      </footer>
     </div>
   );
 };
